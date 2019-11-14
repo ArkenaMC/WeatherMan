@@ -39,7 +39,6 @@ import me.fromgate.weatherman.util.lang.BukkitMessenger;
 import me.fromgate.weatherman.util.lang.M;
 import me.fromgate.weatherman.util.tasks.InfoTask;
 import me.fromgate.weatherman.util.tasks.LocalWeatherTask;
-import org.bstats.MetricsLite;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -71,6 +70,5 @@ public class WeatherMan extends JavaPlugin {
         new LocalWeatherTask().runTaskTimer(this, 30, 11);
         new InfoTask().runTaskTimer(this, 30, 8);
         UpdateChecker.init(this, "WeatherMan", "38125", "wm", Cfg.checkUpdates);
-        new MetricsLite(this);
     }
 }
